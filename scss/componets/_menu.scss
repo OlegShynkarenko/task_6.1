@@ -1,0 +1,26 @@
+.menu {
+  display: flex;
+  margin-top: 9rem;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin-bottom: 2.2rem;
+  }
+
+  &__link {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-1;
+    padding: 0 1.8rem 2rem 1.8rem;
+    margin-right: 1.8rem;
+  }
+
+  &__link_current {
+    border-bottom: 0.6rem solid $color-2;
+    border-radius: 2px;
+    padding-bottom: 1.5rem;
+  }
+}
