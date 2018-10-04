@@ -52,16 +52,16 @@
   width: 100%;
 }
 .sidebar__fa-icon {
-  color: #faf3fc;
   font-size: 2.2rem;
   line-height: 3rem;
   margin: 0 1.9rem 0 0;
+  color: #faf3fc;
 }
 .sidebar__link {
-  color: #faf3fc;
   font-size: 1.7rem;
   font-weight: 300;
   line-height: 3rem;
+  color: #faf3fc;
 }
 
 .main-content {
@@ -75,111 +75,106 @@
   padding: 0 0.2rem 0 0.2rem;
 }
 
-.header {
+.controls {
   border-bottom: 3px solid rgba(237, 237, 237, 0.4);
   padding: 1.5rem 0 1.5rem 0;
 }
-.header__container {
+.controls__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
-.header__breadcrumbs-list {
+.controls__list {
   padding: 0;
   display: flex;
 }
-.header__breadcrumbs-link {
+.controls__link {
   color: #303841;
   font-size: 1.6rem;
   font-weight: 700;
 }
-.header__breadcrumbs-pointer {
+.controls__pointer {
   color: #303841;
   font-size: 1.6rem;
   font-weight: 700;
   margin: 0 1.9rem 0 1.9rem;
 }
-.header__breadcrumbs-link_current {
+.controls__link_current {
   color: #442a9d;
   font-size: 1.6rem;
   font-weight: 700;
   white-space: nowrap;
 }
-.header__controls-form {
+.controls__form {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
-.header__search-field {
+.controls__search-field {
   width: 28.5rem;
   height: 3.8rem;
   border: 1px solid #ededed;
   border-radius: 0.4rem;
   padding-left: 2.1rem;
   font-size: 1.2rem;
-  background: url("/images/header/search.jpg") no-repeat 250px 10px;
+  background: url("/images/header/search.jpg") no-repeat 25rem 1rem;
 }
-.header__search-field::-webkit-input-placeholder {
+.controls__search-field::-webkit-input-placeholder {
   color: #999;
   font-size: 1.2rem;
   font-weight: 400;
   text-transform: uppercase;
 }
-.header__search-field::-ms-input-placeholder {
+.controls__search-field::-ms-input-placeholder {
   color: #999;
   font-size: 1.2rem;
   font-weight: 400;
   text-transform: uppercase;
 }
-.header__search-field::placeholder {
+.controls__search-field::placeholder {
   color: #999;
   font-size: 1.2rem;
   font-weight: 400;
   text-transform: uppercase;
 }
-.header__notification-item-mail {
+.controls__mail {
   margin-left: 2.8rem;
 }
-.header__notification-item-notice {
+.controls__notice {
   margin: 0 3.3rem 0 1.3rem;
 }
-.header__controls-image {
+.controls__image {
   margin-right: 1rem;
 }
-.header__controls-users-list {
+.controls__users {
   border: none;
   font-size: 1.6rem;
   font-weight: bold;
 }
 
-.user-profile {
+.profile {
   padding: 6rem 0 0 0;
 }
-.user-profile__container {
+.profile__container {
   display: flex;
   flex-direction: column;
   padding-left: 13rem;
   position: relative;
 }
-.user-profile__user-photo {
+.profile__photo {
   position: absolute;
   left: 0.5rem;
   top: 0.2rem;
 }
-.user-profile__main-info {
+.profile__info {
   display: flex;
   justify-content: space-between;
   border-bottom: 2px solid #ededed;
   padding-bottom: 1rem;
 }
-.user-profile__item-contact {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 2rem;
-}
-.user-profile__user-name {
+.profile__name {
   position: relative;
   padding-right: 6.5rem;
   font-size: 2rem;
@@ -188,7 +183,7 @@
   color: #4f4f4f;
   margin: 0 0 1.6rem 0;
 }
-.user-profile__gold-status {
+.profile__status {
   position: absolute;
   top: 0.2rem;
   right: 0;
@@ -199,27 +194,34 @@
   background: #ffc12d;
   border-radius: 4px;
 }
-.user-profile__activity {
+.profile__activity {
   font-size: 1.5rem;
   color: #999;
   font-weight: 700;
 }
-.user-profile__invitation {
+.profile__invitation {
+  display: block;
   color: #999;
   font-size: 1.2rem;
   text-transform: uppercase;
+  margin: 0.5rem 0 1.4rem 0;
 }
-.user-profile__social-link-facebook {
+.profile__link-facebook {
   margin: 0 2rem 0 2rem;
 }
-.user-profile__contacts {
+.profile__contacts {
   display: flex;
-  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
 }
-.user-profile__contacts-item {
+.profile__contacts-list {
+  display: flex;
+}
+.profile__contacts-item {
   margin-right: 10.8rem;
 }
-.user-profile__contacts-category {
+.profile__contacts-category {
   display: block;
   font-size: 1.2rem;
   font-weight: 700;
@@ -227,14 +229,14 @@
   text-transform: uppercase;
   margin-bottom: 1.3rem;
 }
-.user-profile__contacts-link {
+.profile__contacts-description {
   position: relative;
   font-size: 1.5rem;
   font-weight: 700;
   color: #442a9d;
   cursor: pointer;
 }
-.user-profile__contacts-link:hover::after {
+.profile__contacts-description:hover::after {
   content: "";
   position: absolute;
   left: 0;
@@ -242,7 +244,7 @@
   min-width: 20rem;
   border: 1px solid #d4d4d4;
 }
-.user-profile__button {
+.profile__button {
   width: 15.9rem;
   height: 3.6rem;
   background: #303841;
@@ -250,19 +252,24 @@
   border-radius: 0.4rem;
   font-size: 1.4rem;
   font-weight: 700;
-  color: #ffc12d;
   text-transform: uppercase;
+  color: #ffc12d;
 }
-.user-profile__details {
+.profile__button:hover {
+  opacity: 0.7;
+}
+
+.menu {
+  display: flex;
   margin-top: 9rem;
 }
-.user-profile__details-list {
+.menu__list {
   display: flex;
   flex-direction: row;
   padding: 0;
   margin-bottom: 2.2rem;
 }
-.user-profile__details-link {
+.menu__link {
   font-size: 1.4rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -270,7 +277,7 @@
   padding: 0 1.8rem 2rem 1.8rem;
   margin-right: 1.8rem;
 }
-.user-profile__details-link:hover {
+.menu__link_current {
   border-bottom: 0.6rem solid #442a9d;
   border-radius: 2px;
   padding-bottom: 1.5rem;
@@ -278,9 +285,9 @@
 
 .overview {
   background: #ededed;
-  padding: 6.2rem 0 3rem 0;
+  padding: 6.2rem 0 5rem 0;
 }
-.overview__item {
+.overview__overall {
   display: flex;
   justify-content: space-between;
 }
@@ -330,7 +337,7 @@
   background: white url("../images/overview/statistic.png") no-repeat bottom;
   padding: 2.5rem 0 2.5rem 0;
 }
-.overview__turnover-progress {
+.overview__turnover-amount {
   color: #4f4f4f;
   font-size: 4.4rem;
   font-weight: 700;
@@ -356,7 +363,6 @@
   font-weight: 400;
   text-transform: uppercase;
   color: #ffc12d;
-  vertical-align: top;
 }
 .overview__orders-total-num {
   font-size: 3.7rem;
@@ -434,6 +440,9 @@
 }
 .activity__link {
   color: #442a9d;
+}
+.activity__link:hover {
+  border-bottom: 1px solid #442a9d;
 }
 .activity__date-description {
   font-size: 1.4rem;
